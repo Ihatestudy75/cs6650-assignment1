@@ -1,0 +1,57 @@
+SMOKE TEST ONLY: NOT an official assignment run
+Server: http://localhost:8080/ski_servlet_war_exploded2
+Single-request probe: 20 EXTRA requests, excluded from 500K.
+First request including initial connection setup: 313.853 ms
+Mean of next 19 reused-client requests: 4.026 ms
+Little's Law estimates (assumes one in-flight request per sender):
+Warmup concurrency 4 / RTT = 993.57 swipes/s
+Main concurrency 8 / RTT = 1987.13 swipes/s
+These are baseline estimates; RTT may increase under load.
+Generation: 0.001 s (excluded from load runtime)
+Successful swipes: 200
+Failed swipes: 0
+HTTP attempts: 200; retries: 0
+Warmup: 40 events, 40 successful, 0.056 s, 709.45 successful swipes/s
+Main: 160 events, 160 successful, 8 threads, 0.128 s, 1246.75 successful swipes/s
+Total load wall-clock time: 0.186 s
+Overall throughput: 1074.47 successful swipes/s
+HTTP attempt latency (includes failed attempts) (ms): mean=5.288 median=3.214 p95=15.224 p99=22.769 min=1.500 max=31.280
+Logical swipe latency (includes retries/backoff) (ms): mean=5.307 median=3.219 p95=15.238 p99=22.773 min=1.505 max=31.293
+Resort 1: 16 successful, 85.96 swipes/s
+Resort 2: 22 successful, 118.19 swipes/s
+Resort 3: 16 successful, 85.96 swipes/s
+Resort 4: 22 successful, 118.19 swipes/s
+Resort 5: 20 successful, 107.45 swipes/s
+Resort 6: 22 successful, 118.19 swipes/s
+Resort 7: 23 successful, 123.56 swipes/s
+Resort 8: 19 successful, 102.07 swipes/s
+Resort 9: 18 successful, 96.70 swipes/s
+Resort 10: 22 successful, 118.19 swipes/s
+Subscriber 0, resort 1: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=50.694 median=50.694 p95=50.694 p99=50.694 min=50.694 max=50.694
+Subscriber 1, resort 2: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=46.728 median=46.728 p95=46.728 p99=46.728 min=46.728 max=46.728
+Subscriber 2, resort 3: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=49.942 median=49.942 p95=49.942 p99=49.942 min=49.942 max=49.942
+Subscriber 3, resort 4: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=48.835 median=48.835 p95=48.835 p99=48.835 min=48.835 max=48.835
+Subscriber 4, resort 5: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=48.687 median=48.687 p95=48.687 p99=48.687 min=48.687 max=48.687
+Subscriber 5, resort 6: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=47.781 median=47.781 p95=47.781 p99=47.781 min=47.781 max=47.781
+Subscriber 6, resort 7: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=47.349 median=47.349 p95=47.349 p99=47.349 min=47.349 max=47.349
+Subscriber 7, resort 8: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=47.062 median=47.062 p95=47.062 p99=47.062 min=47.062 max=47.062
+Subscriber 8, resort 9: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=47.624 median=47.624 p95=47.624 p99=47.624 min=47.624 max=47.624
+Subscriber 9, resort 10: 0 updates, 1 connections, 0 reconnects, 0 connection failures, 0 malformed messages
+  Establishment time (ms): mean=45.899 median=45.899 p95=45.899 p99=45.899 min=45.899 max=45.899
+Total leaderboard updates: 0
+WebSocket connections: 10; reconnects: 0
+Push latency: no samples
+Push latency compares different machines' wall clocks and includes clock skew. Negative values are retained, not clamped.
+HTTP requests share a keep-alive HttpClient; its public API does not expose actual TCP connection counts. Reported connections/reconnections refer to WebSockets.
+Load runtime excludes probe, event generation, initial WS setup and result export.
+CSV rows are unordered under concurrency. swipes.csv has one row per HTTP attempt; outcomes.csv has exactly one row per generated event. HTTP status 0 means no response.
+A final partial throughput bucket uses its actual duration.

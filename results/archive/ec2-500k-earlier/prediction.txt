@@ -1,0 +1,7 @@
+Single-request probe: 20 EXTRA requests, excluded from 500K.
+First request including initial connection setup: 138.997 ms
+Mean of next 19 reused-client requests: 42.475 ms
+Little's Law estimates (assumes one in-flight request per sender):
+Warmup concurrency 32 / RTT = 753.38 swipes/s
+Main concurrency 128 / RTT = 3013.52 swipes/s
+These are baseline estimates; RTT may increase under load.
